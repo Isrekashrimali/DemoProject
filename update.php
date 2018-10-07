@@ -34,11 +34,11 @@ $_GET['$cl'];
                         <form action="" method="GET">
 						<div class="form-group">
                         <label>Rollno</label>
-                        <input type="number_format" value="<?php echo $_GET['$rn']; ?>" name="rollno" class="form-control" >
+                        <input type="number_format" value="<?php echo $_GET['rn']; ?>" name="rollno" class="form-control" >
                     </div>
                     <div class="form-group">
                         <label>Name</label>
-                        <input type="text" value="<?php echo $_GET['$sn']; ?>" name="studentname" class="form-control">
+                        <input type="text" value="<?php echo $_GET['sn']; ?>" name="studentname" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Class</label>
@@ -53,12 +53,12 @@ $_GET['$cl'];
 			</div>
 		</div>
 <?php
-	if($_GET('update'))
+	if($_GET['submit'])
 	{
 		$rollno =$_GET['rollno'];
 		$name =$_GET['studentname'];
 		$class =$_GET['class'];
-		$query ="UPADTE STUDENTREC SET NAME='$Name' , CLASS='$Class' , WHERE ROLLNO='$rollno'";
+		$query ="UPADTE STUDENTREC SET NAME='$name' , CLASS='$class' , WHERE ROLLNO='$rollno'";
 		$data = mysqli_query($conn, $query);
 		if($data)
 		{
