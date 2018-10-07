@@ -58,7 +58,7 @@ $_GET['$cl'];
 		$rollno =$_GET['rollno'];
 		$name =$_GET['studentname'];
 		$class =$_GET['class'];
-		$query ="UPADTE STUDENTREC SET NAME='$Name' , CLASS='Class' , WHERE ROLLNO='$rollno'";
+		$query ="UPADTE STUDENTREC SET NAME='$Name' , CLASS='$Class' , WHERE ROLLNO='$rollno'";
 		$data = mysqli_query($conn, $query);
 		if($data)
 		{
